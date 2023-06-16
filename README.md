@@ -66,3 +66,5 @@ Deploy the manager using the image in your registry:
 ```shell
 make deploy -e K8S_NAMESPACE=<YOUR_NAMESPACE> -e IMG=<YOUR_IMAGE>
 ```
+
+### Testing
