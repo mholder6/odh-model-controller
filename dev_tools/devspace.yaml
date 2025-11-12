@@ -49,13 +49,13 @@ vars:
 # This is a list of `dev` containers that are based on the containers created by your deployments
 dev:
   app:
-    namespace: opendatahub
+    namespace: redhat-ods-applications
     workingDir: /app
     # Search for the container that runs this image
     labelSelector:
       control-plane: odh-model-controller
     # Replace the container image with this dev-optimized image (allows to skip image building during development)
-    devImage: quay.io/rh-ee-allausas/golang:1.22-odh-devspace-debug
+    devImage: quay.io/vedantm/golang:1.24-odh-kserve-dev
     # Sync files between the local filesystem and the development container
     sync:
       - path: ../:/app
